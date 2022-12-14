@@ -1,24 +1,93 @@
+-- 2 to 1 multiplexer
+--
+-- IP----NAND1
+--       NAND1------------------NAND3
+--  S----NAND1                  NAND3
+--                              NAND3----O
+--  S----NOT1----!S----NAND2    NAND3
+--                     NAND2----NAND3
+--               IN----NAND2
+
 function layout(gate, _P)
-    local bp = pcell.get_parameters("stdcells/base")
-    local xpitch = bp.gspace + bp.glength
+    local bp = pcell.get_parameters("stdcells/base");
 
-    local gatecontactpos = {
-        "upper", "lower", "center"
-    }
+    local nandref = pcell.create_layout("stdcells/nand_gate", "nand")
+    local nand1 = gate:add_child(nandref, "nand1")
+    local nand2 = gate:add_child(nandref, "nand2")
+    local nand3 = gate:add_child(nandref, "nand3")
 
-    local contactpos = { "power", "inner", "inner", "power" }
-    local harness = pcell.create_layout("stdcells/harness", "harness", {
-        gatecontactpos = gatecontactpos,
-        pcontactpos = contactpos,
-        ncontactpos = contactpos,
-    })
-    gate:merge_into(harness)
-    gate:inherit_alignment_box(harness)
+    local notref = pcell.create_layout("stdcells/not_gate", "not")
+    local not1 = gate:add_child(notref, "not1")
 
-    -- ports
-    gate:add_port("A", generics.metalport(1), harness:get_anchor("G1cc"))
-    gate:add_port("B", generics.metalport(1), harness:get_anchor("G1cc"))
-    gate:add_port("O", generics.metalport(1), point.create((3 + 1) * xpitch / 2, 0))
-    gate:add_port("VDD", generics.metalport(1), harness:get_anchor("top"))
-    gate:add_port("VSS", generics.metalport(1), harness:get_anchor("bottom"))
+    local isoref = pcell.create_layout("stdcells/isogate", "iso")
+    local iso1 = gate:add_child(isoref, "iso1")
+    local iso2 = gate:add_child(isoref, "iso2")
+    local iso3 = gate:add_child(isoref, "iso3")
+
+    iso1:move_anchor("left", nand1:get_anchor("right"))
+    not1:move_anchor("left", iso1:get_anchor("right"))
+    iso2:move_anchor("left", not1:get_anchor("right"))
+    nand2:move_anchor("left", iso2:get_anchor("right"))
+    iso3:move_anchor("left", nand2:get_anchor("right"))
+    nand3:move_anchor("left", iso3:get_anchor("right"))
+
+    gate:inherit_alignment_box(nand1)
+    gate:inherit_alignment_box(nand3)
+
+    -- draw connections
+    geometry.path(gate, generics.metal(2), 
+    geometry.path_points_yx(nand1:get_anchor("O"), {
+        nand3:get_anchor("A")
+    }), 
+    bp.sdwidth)
+    geometry.viabltr(gate, 1, 2, 
+        nand1:get_anchor("O"):translate(-bp.sdwidth / 2, -bp.sdwidth / 2),
+        nand1:get_anchor("O"):translate( bp.sdwidth / 2,  bp.sdwidth / 2)
+    )
+    geometry.viabltr(gate, 1, 2, 
+        nand3:get_anchor("A"):translate(-bp.sdwidth / 2, -bp.sdwidth / 2),
+        nand3:get_anchor("A"):translate( bp.sdwidth / 2,  bp.sdwidth / 2)
+    )
+
+    geometry.path(gate, generics.metal(2), 
+    geometry.path_points_xy(nand1:get_anchor("B"), {
+        not1:get_anchor("I")
+    }), 
+    bp.sdwidth)
+    geometry.viabltr(gate, 1, 2, 
+        nand1:get_anchor("B"):translate(-bp.sdwidth / 2, -bp.sdwidth / 2),
+        nand1:get_anchor("B"):translate( bp.sdwidth / 2,  bp.sdwidth / 2)
+    )
+    geometry.viabltr(gate, 1, 2, 
+        not1:get_anchor("I"):translate(-bp.sdwidth / 2, -bp.sdwidth / 2),
+        not1:get_anchor("I"):translate( bp.sdwidth / 2,  bp.sdwidth / 2)
+    )
+
+    geometry.path(gate, generics.metal(2), 
+    geometry.path_points_xy(not1:get_anchor("O"), {
+        nand2:get_anchor("B")
+    }), 
+    bp.sdwidth)
+    geometry.viabltr(gate, 1, 2, 
+        not1:get_anchor("O"):translate(-bp.sdwidth / 2, -bp.sdwidth / 2),
+        not1:get_anchor("O"):translate( bp.sdwidth / 2,  bp.sdwidth / 2)
+    )
+    geometry.viabltr(gate, 1, 2, 
+        nand2:get_anchor("B"):translate(-bp.sdwidth / 2, -bp.sdwidth / 2),
+        nand2:get_anchor("B"):translate( bp.sdwidth / 2,  bp.sdwidth / 2)
+    )
+
+    geometry.path(gate, generics.metal(1), 
+    geometry.path_points_xy(nand2:get_anchor("O"), {
+        nand3:get_anchor("B")
+    }), 
+    bp.sdwidth)
+
+    --draw ports
+    gate:add_port("IN", generics.metalport(1), nand2:get_anchor("A"))
+    gate:add_port("IP", generics.metalport(1), nand1:get_anchor("A"))
+    gate:add_port("S", generics.metalport(1), nand1:get_anchor("B"))
+    gate:add_port("O", generics.metalport(1), nand3:get_anchor("O"))
+    gate:add_port("VDD", generics.metalport(1), not1:get_anchor("VDD"))
+    gate:add_port("VSS", generics.metalport(1), not1:get_anchor("VSS"))
 end
