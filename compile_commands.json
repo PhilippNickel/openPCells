@@ -1,0 +1,327 @@
+[
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lapi.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lapi.o lapi.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lcode.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX   -c lcode.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lctype.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lctype.o lctype.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "ldebug.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o ldebug.o ldebug.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "ldo.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o ldo.o ldo.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "ldump.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o ldump.o ldump.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lfunc.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lfunc.o lfunc.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lgc.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lgc.o lgc.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "llex.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX   -c llex.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lmem.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lmem.o lmem.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lobject.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lobject.o lobject.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lopcodes.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lopcodes.o lopcodes.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lparser.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX   -c lparser.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lstate.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lstate.o lstate.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lstring.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lstring.o lstring.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "ltable.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o ltable.o ltable.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "ltm.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o ltm.o ltm.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lundump.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lundump.o lundump.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lvm.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lvm.o lvm.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lzio.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lzio.o lzio.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lauxlib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lauxlib.o lauxlib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lbaselib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lbaselib.o lbaselib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lcorolib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lcorolib.o lcorolib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "ldblib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o ldblib.o ldblib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "liolib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o liolib.o liolib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lmathlib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lmathlib.o lmathlib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "loadlib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o loadlib.o loadlib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "loslib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o loslib.o loslib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lstrlib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lstrlib.o lstrlib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "ltablib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o ltablib.o ltablib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "lutf8lib.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o lutf8lib.o lutf8lib.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src/lua",
+    "file": "linit.c",
+    "command": "gcc -std=gnu99 -O2 -Wall -Wextra -DLUA_COMPAT_5_3 -DLUA_USE_LINUX    -c -o linit.o linit.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "embed_compiled_lua_file.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX  embed_compiled_lua_file.c lua/liblua.a -o embed_compiled_lua_file -lm"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "cmdoptions.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o cmdoptions.o cmdoptions.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "export_common.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o export_common.o export_common.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "export.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o export.o export.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "export_writer.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o export_writer.o export_writer.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "filesystem.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o filesystem.o filesystem.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "gdsexport.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o gdsexport.o gdsexport.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "gdsparser.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o gdsparser.o gdsparser.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "geometry.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o geometry.o geometry.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "geometry_triangulate.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o geometry_triangulate.o geometry_triangulate.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "graphics.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o graphics.o graphics.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "hashmap.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o hashmap.o hashmap.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "info.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o info.o info.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "ldebug.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o ldebug.o ldebug.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "ldir.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o ldir.o ldir.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lgenerics.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lgenerics.o lgenerics.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lgeometry.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lgeometry.o lgeometry.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lobject.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lobject.o lobject.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lplacer_classic.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lplacer_classic.o lplacer_classic.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lplacer_common.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lplacer_common.o lplacer_common.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lplacer_nonoverlapping.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lplacer_nonoverlapping.o lplacer_nonoverlapping.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lplacer.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lplacer.o lplacer.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lplacer_rand.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lplacer_rand.o lplacer_rand.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lpoint.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lpoint.o lpoint.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lrouter_field.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lrouter_field.o lrouter_field.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lrouter_min_heap.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lrouter_min_heap.o lrouter_min_heap.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lrouter_moves.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lrouter_moves.o lrouter_moves.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lrouter_net.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lrouter_net.o lrouter_net.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lrouter.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lrouter.o lrouter.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lrouter_queue.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lrouter_queue.o lrouter_queue.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lrouter_route.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lrouter_route.o lrouter_route.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "lua_util.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o lua_util.o lua_util.c"
+  },
+  {
+    "directory": "/home/philippnickel/Github/openPCells/src",
+    "file": "main.api_help.c",
+    "command": "gcc -std=gnu99 -O0 -g -Wall -Wextra -Wstrict-prototypes -pthread -DLUA_USE_LINUX    -c -o main.api_help.o main.api_help.c"
+  }
+]

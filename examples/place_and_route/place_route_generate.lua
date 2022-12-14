@@ -1,4 +1,4 @@
-local module = "command_reg"
+local module = "serial_ctrl_new"
 local exporttype = "gds"
 
 local netlist = verilog.read_parse_file(string.format("%s.v", module))
@@ -17,8 +17,8 @@ local ignorednets = {
 }
 local instances, nets = verilogprocessor.collect_nets_cells(netlist, cellinfo, ignorednets)
 
-local utilization = 0.6
-local numrows = 3
+local utilization = 0.7
+local numrows = 6
 local floorplan = placement.create_floorplan_fixed_rows(instances, utilization, numrows)
 local rows = placement.optimize(instances, nets, floorplan)
 --local plan = {

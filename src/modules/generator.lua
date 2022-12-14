@@ -3,11 +3,12 @@ local M = {}
 local function _write_module(rows, routes, numinnerroutes, pnumtracks, nnumtracks)
     local lines = {}
         table.insert(lines, 'function layout(toplevel)')
-            table.insert(lines, string.format('    pcell.push_overwrites("stdcells/base", { pnumtracks = %i })', pnumtracks))
-            table.insert(lines, string.format('    pcell.push_overwrites("stdcells/base", { nnumtracks = %i })', nnumtracks))
-            table.insert(lines, string.format('    pcell.push_overwrites("stdcells/base", { numinnerroutes= %i })', numinnerroutes))
-            table.insert(lines, string.format('    pcell.push_overwrites("stdcells/base", { drawtopbotwelltaps = %s })', 'false'))
-    
+            table.insert(lines,               '    pcell.push_overwrites("stdcells/base", {')
+            table.insert(lines, string.format('                                               pnumtracks = %i })', pnumtracks))
+            table.insert(lines, string.format('                                               nnumtracks = %i })', nnumtracks))
+            table.insert(lines, string.format('                                               numinnerroutes= %i })', numinnerroutes))
+            table.insert(lines, string.format('                                               drawtopbotwelltaps = %s })', 'false'))
+
             table.insert(lines, '    local bp = pcell.get_parameters("stdcells/base")')
             -- placement
             if rows then
@@ -15,8 +16,8 @@ local function _write_module(rows, routes, numinnerroutes, pnumtracks, nnumtrack
                 for _, row in ipairs(rows) do
                     table.insert(lines, '        {')
                     for _, column in ipairs(row) do
-                        table.insert(lines, string.format('            { instance = "%s", reference = "%s" },', 
-                        column.instance, 
+                        table.insert(lines, string.format('            { instance = "%s", reference = "%s" },',
+                        column.instance,
                         column.reference
                         ))
                     end

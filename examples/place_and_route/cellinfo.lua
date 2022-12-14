@@ -1,5 +1,5 @@
 return {
-    buf = {
+    buf_gate = {
         width = 4,
         pinoffsets = {
             I = { x = 0.0, y = 0.0 },
@@ -58,7 +58,23 @@ return {
         width = 11,
         pinoffsets = {
             A = { x = 0.0, y = -1.0 },
+            B = { x = 0.0, y = 1.0 },
+            O = { x = 11.0, y = 0.0 },
         },
+        blockages = {
+            {
+                { x = 0, y = 1, z = 2 },
+                { x = 8, y = 1, z = 2 },
+            },
+            {
+                { x = 0, y = -1, z = 2 },
+                { x = 10, y = -1, z = 2 },
+            },
+            {
+                { x = 5, y = 0, z = 2 },
+                { x = 9, y = 0, z = 2 },
+            },
+        }
     },
     dffpq = {
         width = 22,

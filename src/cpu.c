@@ -1,5 +1,6 @@
 #include "cpu.h"
 
+#include <unistd.h>
 
 unsigned int cpu_get_num_cpus()
 {

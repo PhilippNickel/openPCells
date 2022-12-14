@@ -1,0 +1,29 @@
+started placement
+finished placement
+3
+started routing
+
+field width 29, field height 14
+
+
+routing in
+NUM CPU 4
+netsize 6
+netsize 5
+netsize 4
+netsize 3
+netsize 2
+routed in: 1/2
+
+
+routing out
+NUM CPU 4
+netsize 6
+netsize 5
+netsize 4
+netsize 3
+netsize 2
+routed out: 2/2
+finished routing
+
+writing to file 'verilogimport/verilogimport/multinet.lua'

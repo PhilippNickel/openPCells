@@ -12,9 +12,9 @@ function layout(gate, _P)
     local xpitch = bp.gspace + bp.glength
 
     local harness = pcell.create_layout("stdcells/harness", "mosfets", {
-        gatecontactpos = { "dummy" }, 
-        pcontactpos = { "power", "power" }, 
-        ncontactpos = { "power", "power" }, 
+        gatecontactpos = { "dummy" },
+        pcontactpos = { "power", "power" },
+        ncontactpos = { "power", "power" },
         pwidth = _P.pwidth,
         nwidth = _P.nwidth,
         drawdummyactivecontacts = false,
