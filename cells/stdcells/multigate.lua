@@ -1,12 +1,18 @@
--- 2 to 1 multiplexer
+-- multigate e.g cascaded multi input base gate with one gate kind
+-- e.g. and_gate and 3 inputs
 --
--- IP----NAND1
---       NAND1------------------NAND3
---  S----NAND1                  NAND3
---                              NAND3----O
---  S----NOT1----!S----NAND2    NAND3
---                     NAND2----NAND3
---               IN----NAND2
+-- a1----AND 
+--       AND----AND
+-- a2----AND    AND
+--              AND-----o1
+-- a3-----------AND
+--
+function parameters()
+    pcell.add_parameters(
+        { "gate", "and_gate" },
+        { "num_inputs", 3 },
+    )
+end
 
 function layout(gate, _P)
     local bp = pcell.get_parameters("stdcells/base");
